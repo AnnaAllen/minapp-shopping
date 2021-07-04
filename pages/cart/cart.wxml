@@ -1,0 +1,80 @@
+<view class="deliver-address">
+
+  <view class="address-but" wx:if="{{!address.userName}}">
+    <button 
+      type="primary" 
+      plain
+      bind:tap="getUserAddress">获取收货地址</button>
+  </view>
+
+  <view wx:else class="address-info0">
+    <view class="address-info1">
+      <view class="username">收货人：{{address.userName}}</view>
+      <view class="userphone">电话：{{address.telNumber}}</view>
+    </view>
+    <view class="address-info2">
+      <view>地址：{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="gwc-title">购物车</view>
+
+<view class="goods-info">
+  <block wx:if="{{goodsInfo.length!==0}}">
+    <view class="goods-item" 
+    wx:for="{{goodsInfo}}"
+    wx:key="goods_id">
+    <!-- 复选框 -->
+    <view class="check">
+      <checkbox-group data-id="{{item.goods_id}}" bindchange="changeSelect">
+        <checkbox checked="{{item.checked}}"></checkbox>
+      </checkbox-group>
+    </view>
+
+    <!-- 图片 -->
+    <navigator>
+      <image src="{{item.goods_big_logo}}" mode="widthFix"></image>
+    </navigator>
+
+    <!-- 信息 -->
+    <view class="info">
+      <view class="info1">{{item.goods_name}}</view>
+      <view class="info2">
+        <view class="price">￥{{item.goods_price}}</view>
+        
+        <view class="num">
+          <view 
+            class="add" 
+            bind:tap="changeNum"
+            data-para="{{1}}"
+            data-id="{{item.goods_id}}">+</view>
+          <view class="num-detail">{{item.num}}</view>
+          <view 
+            class="reduce"
+            bind:tap="changeNum"
+            data-para="{{-1}}"
+            data-id="{{item.goods_id}}">-</view>
+        </view>
+        
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>未选购商品</block>
+</view>
+
+<view class="final">
+  <view class="select-all">
+    <checkbox-group>
+      <checkbox checked="{{allChecked}}" bind:tap="changeALlSelect">全选</checkbox>
+    </checkbox-group>
+  </view>
+  <view class="total-price">
+    <view class="total-price-detail">合计：￥{{totalPrice}}</view>
+    <text>包含运费</text>
+  </view>
+  <view class="close-account" bind:tap="closeAccount">
+    结算({{totalNum}})
+  </view>
+</view>

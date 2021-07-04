@@ -1,0 +1,48 @@
+<view class="deliver-address">
+  <view class="address-info0">
+    <view class="address-info1">
+      <view class="username">收货人：{{address.userName}}</view>
+      <view class="userphone">电话：{{address.telNumber}}</view>
+    </view>
+    <view class="address-info2">
+      <view>地址：{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="gwc-title">支付信息</view>
+
+<view class="goods-info">
+    <view class="goods-item" 
+    wx:for="{{goodsInfo}}"
+    wx:key="goods_id">
+
+    <!-- 图片 -->
+    <navigator>
+      <image src="{{item.goods_big_logo}}" mode="widthFix"></image>
+    </navigator>
+
+    <!-- 信息 -->
+    <view class="info">
+      <view class="info1">{{item.goods_name}}</view>
+      <view class="info2">
+        <view class="price">￥{{item.goods_price}}</view>
+        
+        <view class="num">
+          <view class="num-detail">X {{item.num}}</view>
+        </view>
+        
+        </view>
+      </view>
+    </view>
+</view>
+
+<view class="final">
+  <view class="total-price">
+    <view class="total-price-detail">合计：￥{{totalPrice}}</view>
+    <text>包含运费</text>
+  </view>
+  <view class="close-account">
+    结算({{totalNum}})
+  </view>
+</view>

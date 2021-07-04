@@ -1,0 +1,55 @@
+<view class="goods_detail">
+  <swiper
+    autoplay
+    circular
+    indicator-dots
+    class="swiper-type"
+    >
+    <swiper-item
+      wx:for="{{goodDetail.pics}}"
+      wx:key="pics_id"
+      bind:tap="watchPicture"
+      data-url="{{item.pics_mid}}"
+      >
+      <image mode="widthFix" class="swiper-img" src="{{item.pics_mid}}"></image>
+    </swiper-item>
+  </swiper>
+  
+  <view class="good-info1">￥{{goodDetail.goods_price}}</view>
+  <view class="good-info2">
+    <view class="good-info2-name">
+      {{goodDetail.goods_name}}
+    </view>
+    <view class="good-info2-collect">
+      <text class="iconfont icon-shoucang"></text>
+      <view>收藏</view>
+    </view>
+  </view>
+  <view class="good-info3-title">
+    图文详情
+  </view>
+  <view class="good-info3-content">
+    <rich-text nodes="{{goodDetail.goods_introduce}}"></rich-text>
+  </view>
+</view>
+
+<view class="but-tool">
+  <view class="service">
+    <text class="iconfont icon-service"></text>
+    <view>练习客服</view>
+  </view>
+  <view class="share">
+    <text class="iconfont icon-fenxiang"></text>
+    <view>分享</view>
+  </view>
+
+  <navigator url="/pages/cart/cart" open-type="switchTab">
+    <view class="gwc">
+      <text class="iconfont icon-xiazai1"></text>
+      <view>购物车</view>
+    </view>
+  </navigator>
+
+  <view class="add-gwc" bind:tap="addGwc">加入购物车</view>
+  <view class="pay-for">立即购买</view>
+</view>

@@ -1,0 +1,85 @@
+<view class="user-img-box">
+  <view 
+    class="user-show-img" 
+    wx:if="{{userInfo.avatarUrl}}">
+    <view class="user-img-backgroud">
+      <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="user-img-small">
+      <image src="{{userInfo.avatarUrl}}"></image>
+      <view class="user-name">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+
+  <view class="base-login" wx:else>
+    <navigator url="/pages/login/login">登录</navigator>
+  </view>
+</view>
+
+<view class="user-info-box">
+  <view class="main-box">
+    <view class="info-box1">
+      <navigator>
+        <view class="num">0</view>
+        <view>收藏的店铺</view>
+      </navigator>
+      <navigator>
+        <view class="num">0</view>
+        <view>收藏的商品</view>
+      </navigator>
+      <navigator>
+        <view class="num">0</view>
+        <view>关注的商品</view>
+      </navigator>
+      <navigator>
+        <view class="num">0</view>
+        <view>我的足迹</view>
+      </navigator>
+    </view>
+    <view class="info-box2">
+      <view class="box2-title">
+        我的订单
+      </view>
+      <view class="box2-content">
+        <navigator>
+          <view class="iconfont icon-dingdan"></view>
+          <view class="box2-text">全部订单</view>
+        </navigator>
+        <navigator>
+          <view class="iconfont icon-daifukuan"></view>
+          <view class="box2-text">待付款</view>
+        </navigator>
+        <navigator>
+          <view class="iconfont icon-daishouhuo"></view>
+          <view class="box2-text">待收货</view>
+        </navigator>
+        <navigator>
+          <view class="iconfont icon-tuihuo"></view>
+          <view class="box2-text">退款/退货</view>
+        </navigator>
+      </view>
+    </view>
+    <view class="info-box3">
+      <navigator>
+        <view>收获地址管理</view>
+      </navigator>
+    </view>
+    <view class="info-box4">
+      <navigator>
+        <view>联系客服</view>
+      </navigator>
+      <navigator>
+        <view>意见反馈</view>
+      </navigator>
+      <navigator>
+        <view>关于我们</view>
+      </navigator>
+    </view>
+    <view class="info-box5">
+      <navigator>
+        <view>把应用推荐给其他人</view>
+      </navigator>
+    </view>
+  </view>
+</view>
+

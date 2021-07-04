@@ -1,0 +1,106 @@
+page {
+  background-color: #ccc;
+}
+.user-img-box {
+  height: 45vh;
+  background-color: var(--themeColor);
+  overflow: hidden;
+}
+.user-img-box .user-show-img {
+  position: relative;
+}
+.user-img-box .user-show-img .user-img-backgroud image {
+  height: 50vh;
+  filter: blur(5px);
+}
+.user-img-box .user-show-img .user-img-small {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15%;
+  text-align: center;
+}
+.user-img-box .user-show-img .user-img-small image {
+  height: 120rpx;
+  widows: 120rpx;
+  border-radius: 50%;
+}
+.user-img-box .user-show-img .user-img-small .user-name {
+  padding: 20rpx;
+  font-size: 30rpx;
+}
+.user-img-box .base-login {
+  height: 80rpx;
+  width: 150rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 40rpx;
+  border: 4rpx solid #fff;
+  padding: 10rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15%;
+}
+.user-info-box {
+  position: relative;
+}
+.user-info-box .main-box {
+  position: absolute;
+  top: -40rpx;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 90%;
+}
+.user-info-box .main-box .info-box1 {
+  text-align: center;
+  background-color: #fff;
+  display: flex;
+  padding: 10rpx 0;
+}
+.user-info-box .main-box .info-box1 navigator {
+  flex: 1;
+}
+.user-info-box .main-box .info-box1 navigator .num {
+  color: var(--themeColor);
+}
+.user-info-box .main-box .info-box2 .box2-title {
+  border-top: 20rpx solid #ccc;
+  border-bottom: 4rpx solid #ccc;
+  padding: 20rpx;
+  background-color: #fff;
+}
+.user-info-box .main-box .info-box2 .box2-content {
+  background-color: #fff;
+  display: flex;
+  padding: 10rpx 0;
+}
+.user-info-box .main-box .info-box2 .box2-content navigator {
+  flex: 1;
+  text-align: center;
+}
+.user-info-box .main-box .info-box2 .box2-content navigator .iconfont {
+  color: var(--themeColor);
+  font-size: 50rpx;
+}
+.user-info-box .main-box .info-box3 {
+  background-color: #fff;
+  padding: 20rpx;
+  border-top: 20rpx solid #ccc;
+  border-bottom: 20rpx solid #ccc;
+}
+.user-info-box .main-box .info-box4 {
+  background-color: #fff;
+}
+.user-info-box .main-box .info-box4 navigator {
+  padding: 20rpx;
+  border-bottom: 4rpx solid #ccc;
+}
+.user-info-box .main-box .info-box5 {
+  background-color: #fff;
+  border-top: 20rpx solid #ccc;
+}
+.user-info-box .main-box .info-box5 navigator {
+  padding: 20rpx;
+  border-bottom: 4rpx solid #ccc;
+}

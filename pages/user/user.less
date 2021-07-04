@@ -1,0 +1,114 @@
+page{
+  background-color: #ccc;
+}
+.user-img-box{
+  height: 45vh;
+  background-color: var(--themeColor);
+  overflow: hidden;
+  .user-show-img{
+    position: relative;
+    .user-img-backgroud{
+      image{
+        height: 50vh;
+        filter: blur(5px); 
+      }
+    }
+    .user-img-small{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 15%;
+      text-align: center;
+      image{
+        height: 120rpx;
+        widows: 120rpx;
+        border-radius: 50%;
+      }
+      .user-name{
+        padding: 20rpx;
+        font-size: 30rpx;
+        // color: white;
+      }
+    }
+  }
+  .base-login{
+    height: 80rpx;
+    width: 150rpx;
+    text-align: center;
+    color: white;
+    font-size: 40rpx;
+    border: 4rpx solid white;
+    padding: 10rpx;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15%;
+  }
+}
+
+.user-info-box{
+  position: relative;
+  .main-box{
+    position: absolute;
+    top: -40rpx;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 90%;
+    .info-box1{
+      text-align: center;
+      background-color: white;
+      display: flex;
+      padding: 10rpx 0;
+      navigator{
+        flex: 1;
+        .num{
+          color: var(--themeColor);
+        }
+      }
+    }
+    .info-box2{
+      .box2-title{
+        border-top: 20rpx solid #ccc;
+        border-bottom: 4rpx solid #ccc;
+        padding: 20rpx;
+        background-color: white;
+      }
+      .box2-content{
+        background-color: white;
+        display: flex;
+        padding: 10rpx 0;
+        navigator{
+          flex: 1;
+          text-align: center;
+          .iconfont{
+            color: var(--themeColor);
+            font-size: 50rpx;
+          }
+        }
+      }
+    }
+    .info-box3{
+      background-color: white;
+      padding: 20rpx;
+      border-top: 20rpx solid #ccc;
+      border-bottom: 20rpx solid #ccc;
+    }
+    .info-box4{
+      background-color: white;
+      navigator{
+        padding: 20rpx;
+        border-bottom: 4rpx solid #ccc;
+      }
+    }
+    .info-box5{
+      background-color: white;
+      border-top: 20rpx solid #ccc;
+      
+      navigator{
+        padding: 20rpx;
+        border-bottom: 4rpx solid #ccc;
+      }
+    }
+  }
+  
+}

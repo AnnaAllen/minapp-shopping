@@ -1,0 +1,37 @@
+.good-scroll{
+  height: ~"calc(100vh - 150rpx)";
+  .good-field {
+    navigator{
+    display: flex;
+    border-bottom: 4rpx solid #ccc;
+      .good-img{
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        image{
+          width: 70%;
+          height: 100%;
+        }
+      }
+      .good-info{
+        border: 10rpx solid #fff;
+        flex: 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .good-name{
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+        }
+        .good-price{
+          color: var(--themeColor);
+          font-size: 36rpx;
+        }
+      }
+    }
+}
+}
+

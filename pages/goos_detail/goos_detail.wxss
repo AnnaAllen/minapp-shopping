@@ -1,0 +1,66 @@
+.goods_detail swiper {
+  text-align: center;
+}
+.goods_detail .swiper-img {
+  width: 50%;
+}
+.goods_detail .good-info1 {
+  color: var(--themeColor);
+  font-size: 40rpx;
+}
+.goods_detail .good-info2 {
+  display: flex;
+  font-size: 30rpx;
+  border: 6rpx solid #fff;
+}
+.goods_detail .good-info2 .good-info2-name {
+  flex: 8;
+  border-right: 5rpx solid #ccc;
+}
+.goods_detail .good-info2 .good-info2-collect {
+  text-align: center;
+  flex: 2;
+}
+.goods_detail .good-info3-title {
+  height: 90rpx;
+  border-top: 10rpx solid rgba(0, 0, 0, 0.1);
+  border-bottom: 10rpx solid rgba(0, 0, 0, 0.1);
+  font-size: 40rpx;
+  color: var(--themeColor);
+  line-height: 70rpx;
+}
+.but-tool {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background-color: #fff;
+  text-align: center;
+  height: 100rpx;
+  width: 100%;
+}
+.but-tool .service {
+  padding-top: 10rpx;
+  flex: 1;
+}
+.but-tool .share {
+  padding-top: 10rpx;
+  flex: 1;
+}
+.but-tool .gwc {
+  padding-top: 10rpx;
+  flex: 1;
+}
+.but-tool .add-gwc {
+  background-color: orange;
+  color: #fff;
+  line-height: 90rpx;
+  flex: 2;
+}
+.but-tool .pay-for {
+  background-color: var(--themeColor);
+  color: #fff;
+  line-height: 90rpx;
+  flex: 2;
+}

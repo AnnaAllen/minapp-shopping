@@ -1,0 +1,31 @@
+<view class="good-list">
+  <searchInput></searchInput>
+  <tabs 
+    tabsList="{{tabsList}}"
+    bind:select="active"></tabs>
+
+<scroll-view class="good-scroll" scroll-y lower-threshold="20" bindscrolltolower="onReachBottom">
+  <view class="good-field" >
+    <navigator
+      wx:for="{{goodList}}"
+      wx:key="goods_id"
+      url="/pages/goos_detail/goos_detail?good_id={{item.goods_id}}"> <!-- 向另一个页面传递商品id -->
+      <!-- 左边图片 -->
+      <view class="good-img">
+        <image src="{{item.goods_big_logo}}" mode="widthFix"></image>
+      </view>
+      <!-- 右边信息 -->
+      <view class="good-info">
+        <view class="good-name">
+          {{item.goods_name}}
+        </view>
+        <view class="good-price">
+          ￥{{item.goods_price}}
+        </view>
+      </view>
+    </navigator>
+  </view>
+</scroll-view>
+
+  
+</view>
